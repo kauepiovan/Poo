@@ -1,0 +1,95 @@
+interface Controlador
+    publico abstrato Metodo ligar()
+    publico abstrato Metodo desligar()
+    publico abstrato Metodo abrirMenu()
+    publico abstrato Metodo fecharMenu()
+    publico abstrato Metodo maisVolume()
+    publico abstrato Metodo menosVolume()
+    publico abstrato Metodo ligarMudo()
+    publico abstrato Metodo desligarMudo()
+    publico abstrato Metodo play()
+    publico abstrato Metodo pause() 
+FimInterface
+
+classe ControleRemoto
+    // Atributos
+    privado inteiro volume 
+    privado logico ligado
+    privado logico tocando
+    // metodos especiais
+    publico metodo construtor()
+        volume = 50
+        ligado = falso
+        tocando = falso
+    FimMetodo
+    
+    privado metodo getVolume()
+        retorne volume
+    FimMetodo
+    privado metodo getLigado()
+        retorne volume
+    FimMetodo
+        privado metodo getTocando()
+        retorne volume
+    FimMetodo
+
+    privado metodo setVolume(int v)    
+        volume = v
+    FimMetodo
+    privado metodo setLigado(logico l)    
+        ligado = l
+    FimMetodo
+    privado metodo setTocando(logico t)    
+        tocando = t
+    FimMetodo
+
+    classe ControleRemoto implementa Controlador
+        publico metodo ligar()
+            setLigado(verdadeiro)
+        FimMetodo
+        publico metodo desligar()
+            setLigado(falso)
+        FimMetodo
+        publico metodo abrirMenu()
+            Escreva(getLigado())
+            Escreva(getVolume())
+            Para i = 0 ate getVolume() passo 10 faca
+                Escreva("|")
+            FimPara
+            Escreva(getTocando())
+        FimMetodo
+        publico metodo fecharMenu()
+            Escreva("fechando menu")
+        FimMetodo
+        publico metodo maisVolume()
+            se (getLigado()) entao
+                setVolume(getVolume() + 1)
+            FimSe
+        FimMetodo
+        publico metodo menosVolume()
+            se (getLigado()) entao
+                setVolume(getVolume() - 1)    
+            FimSe
+        FimMetodo
+        publico metodo ligarMudo()
+            se (getLigado() e getVolume() > 0) entao
+                setVolume(0)
+            FimSe
+        FimMetodo
+        publico metodo desligarMudo()
+            se (getLigado() e getVolume = 0) entao
+                setVolume(50)
+            FimSe
+        FimMetodo
+        publico metodo play()
+            se (getLigado() e nao getTocando()) entao
+                setTocando(verdadeiro)
+            FimSe
+        FimMetodo
+        publico metodo pause()
+            se (getLigado() e getTocando()) entao
+                setTocando(falso)
+            FimSe
+        FimMetodo
+
+FimClasse
