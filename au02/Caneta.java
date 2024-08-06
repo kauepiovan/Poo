@@ -3,7 +3,6 @@ package au02;
 public class Caneta {
    public String modelo;
    public String cor;
-   private float ponta;
    protected int carga;
    protected boolean tampada;
 
