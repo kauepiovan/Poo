@@ -1,3 +1,9 @@
+// Exemplos de polimorfismo de sobreposicao
+/*
+ * Acontece quando substituimos um metodo de uma superclasse na sua
+ * subclasse usando a mesma assinatura de metodo.
+ */
+
 package au11;
 
 public class Main {

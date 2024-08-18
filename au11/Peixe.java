@@ -13,6 +13,7 @@ public class Peixe extends Animal {
     public void soltarBolhas() {
         System.out.println("soltando bolhas");
     }
+    
 
     @Override
     public void locomover() {
