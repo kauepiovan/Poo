@@ -6,7 +6,7 @@ public class Luta {
     private Lutador desafiado, desafiante; // Lutador eh um tipo abstrato de dado
     private int rounds;
     private boolean aprovada;
-
+    
     public void marcarLuta(Lutador l1, Lutador l2) {
         if ((l1.getCategoria() == l2.getCategoria()) && (l1 != l2)) {
             this.setAprovada(true);
