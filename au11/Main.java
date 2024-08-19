@@ -8,37 +8,60 @@ package au11;
 
 public class Main {
     public static void main(String [] args) {
-        Mamifero cachorro = new Mamifero();
-        Reptil cobra = new Reptil();
-        Peixe carpa = new Peixe();
-        Ave bemTevi = new Ave();
+        Mamifero mamifero = new Mamifero();
+        Reptil reptil = new Reptil();
+        Peixe peixe = new Peixe();
+        Ave ave = new Ave();
 
-        cachorro.setCorPelo("Caramelo");
-        cobra.setCorEscama("verde");
-        carpa.setCorEscama("Azul");
-        bemTevi.setCorPenas("marrom");
+        mamifero.setCorPelo("Caramelo");
+        reptil.setCorEscama("verde");
+        peixe.setCorEscama("Azul");
+        ave.setCorPenas("marrom");
 
         // metodo alimentar herdado de Animal
-        cachorro.alimentar();
-        cobra.alimentar();
-        carpa.alimentar();
-        bemTevi.alimentar();
+        mamifero.alimentar();
+        reptil.alimentar();
+        peixe.alimentar();
+        ave.alimentar();
 
         // metodo locomover herdado de Animal
-        cachorro.locomover();
-        cobra.locomover();
-        carpa.locomover();
-        bemTevi.locomover();
+        mamifero.locomover();
+        reptil.locomover();
+        peixe.locomover();
+        ave.locomover();
 
         // metodo emitir som herdado de Animal
-        cachorro.emitirSom();
-        cobra.emitirSom();
-        carpa.emitirSom();
-        bemTevi.emitirSom();
+        mamifero.emitirSom();
+        reptil.emitirSom();
+        peixe.emitirSom();
+        ave.emitirSom();
 
         // metodos especificos de cada animal
-        carpa.soltarBolhas();
-        bemTevi.fazerNinho();
+        peixe.soltarBolhas();
+        ave.fazerNinho();
+
+        // Instanciando as classes que herdaram de Mamifero, Ave, Peixe e Reptil
+        Cachorro goldenRetriver = new Cachorro();
+        Canguru australiano = new Canguru();
+        Cobra coral = new Cobra();
+        Tartaruga jaboti = new Tartaruga();
+        PeixeDourado goldenFish = new PeixeDourado();
+        Arara araraAzul = new Arara();
+
+        goldenRetriver.enterrarOsso();
+        goldenRetriver.abanarRabo();
+        goldenRetriver.emitirSom();
+        goldenRetriver.locomover();
+
+        australiano.usarBolsa();
+        australiano.locomover();
+        australiano.alimentar();
+
+        jaboti.locomover();
+        coral.alimentar();
+        goldenFish.locomover();
+        goldenFish.soltarBolhas();
+        araraAzul.fazerNinho();
 
     }
 }
