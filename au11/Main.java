@@ -29,7 +29,7 @@ public class Main {
         reptil.locomover();
         peixe.locomover();
         ave.locomover();
-
+        
         // metodo emitir som herdado de Animal
         mamifero.emitirSom();
         reptil.emitirSom();

@@ -6,6 +6,7 @@ public class Ave extends Animal {
     public void setCorPenas(String corPenas) {
         this.corPenas = corPenas;
     }
+
     public String getCorPenas() {
         return corPenas;
     }
@@ -14,7 +15,7 @@ public class Ave extends Animal {
         System.out.println("ninho feito");
     }
 
-    
+
     @Override
     public void locomover() {
         System.out.println("voando");

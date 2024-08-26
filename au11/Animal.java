@@ -1,7 +1,7 @@
 package au11;
 
 public abstract class Animal {
-    protected double peso;
+    protected float peso;
     protected int idade;
     protected int membros;
 
